@@ -26,13 +26,12 @@ app.post('/calculate-shipping', async (req, res) => {
   const requestBody = {
     from: { postal_code: '30130060' }, // CEP da loja
     to: { postal_code: cepDestino },
-    products: [
+    package: [
       {
         weight: productWeight,
         height: productHeight,
         width: productWidth,
         length: productLength,
-        quantity: 1,
       },
     ],
   };
